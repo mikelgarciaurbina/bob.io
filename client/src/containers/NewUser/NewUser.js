@@ -1,5 +1,11 @@
 import React from 'react';
 
-const NewUser = () => <p>NewUser</p>;
+import { Container, Title } from './components';
+
+const NewUser = () => (
+  <Container>
+    <Title>New User</Title>
+  </Container>
+);
 
 export default NewUser;
