@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { Card, Header } from '../../components';
+import { Card, Footer, Header } from '../../components';
 import * as actions from '../../actions/Users';
 
 import { Container } from './components';
@@ -21,6 +21,7 @@ class App extends React.Component {
       <Fragment>
         <Header />
         <Container>{users.data.map(() => <Card />)}</Container>
+        <Footer />
       </Fragment>
     );
   }
