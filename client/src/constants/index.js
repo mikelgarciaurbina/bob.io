@@ -1,1 +1,2 @@
-export { default as C } from './constants'; // eslint-disable-line
+export { default as C } from './constants';
+export { default as THEME } from './theme';

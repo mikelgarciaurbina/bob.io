@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
+import { THEME } from '../../constants';
+
+const { PRIMARY, WHITE } = THEME;
+
 export const ContainerStyled = styled.div`
-  background: #e83f40;
-  color: #fff;
+  background: ${PRIMARY};
+  color: ${WHITE};
   display: flex;
   flex-direction: row;
   height: 64px;
@@ -30,7 +34,6 @@ export const ImgStyled = styled.img`
 `;
 
 export const TitleStyled = styled.h1`
-  color: #fefefe;
   flex: 1;
   float: none;
   font-size: 1.3em;

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { THEME } from '../../constants';
+
+const { PRIMARY } = THEME;
+
 export const ContainerStyled = styled.div`
   padding-right: 15px;
   position: relative;
@@ -15,7 +19,7 @@ export const FooterStyled = styled.footer`
 `;
 
 export const LinkStyled = styled.a`
-  color: #e83f40;
+  color: ${PRIMARY};
   text-decoration: none;
 `;
 
