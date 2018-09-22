@@ -10,7 +10,7 @@ const Input = ({ label, onChange, value }) => (
     <InputStyled onChange={onChange} type="text" value={value} />
     <HighlightStyled />
     <BarStyled />
-    <LabelStyled>{label}</LabelStyled>
+    <LabelStyled value={value}>{label}</LabelStyled>
   </ContainerStyled>
 );
 Input.propTypes = {

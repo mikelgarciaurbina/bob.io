@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { THEME } from '../../constants';
 
@@ -76,6 +76,12 @@ export const InputStyled = styled.input`
   }
 `;
 
+const labelActive = css`
+  color: ${SECONDARY};
+  font-size: 14px;
+  top: -20px;
+`;
+
 export const LabelStyled = styled.label`
   color: #999;
   font-size: 18px;
@@ -86,10 +92,11 @@ export const LabelStyled = styled.label`
   top: 10px;
   transition: 0.2s ease all;
 
+  ${({ value }) => !!value
+    && labelActive};
+
   input:focus ~ & {
-    color: ${SECONDARY};
-    font-size: 14px;
-    top: -20px;
+    ${labelActive}
   }
 `;
 
