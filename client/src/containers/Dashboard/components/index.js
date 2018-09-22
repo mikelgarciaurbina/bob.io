@@ -1,1 +1,2 @@
-export { default as Container } from './Container'; // eslint-disable-line
+export { default as Container } from './Container';
+export { default as UserCard } from './UserCard';

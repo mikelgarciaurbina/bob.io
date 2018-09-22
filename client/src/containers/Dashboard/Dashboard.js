@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { Card } from '../../components';
 import * as actions from '../../actions/Users';
 
-import { Container } from './components';
+import { Container, UserCard } from './components';
 
 class App extends React.Component {
   componentDidMount() {
@@ -17,7 +16,7 @@ class App extends React.Component {
   render() {
     const { users } = this.props;
 
-    return <Container>{users.data.map(() => <Card />)}</Container>;
+    return <Container>{users.data.map(user => <UserCard user={user} />)}</Container>;
   }
 }
 App.propTypes = {
