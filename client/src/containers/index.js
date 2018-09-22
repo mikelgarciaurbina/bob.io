@@ -8,7 +8,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { Footer, Header } from '../components';
 import rootReducer from '../reducers';
-import Dashboard from './Dashboard';
+import Users from './Users';
+import NewUser from './NewUser';
 
 const store = createStore(
   combineReducers(rootReducer),
@@ -24,7 +25,8 @@ const App = () => (
       <Fragment>
         <Header />
         <Switch>
-          <Route path="/" component={Dashboard} />
+          <Route exact path="/" component={Users} />
+          <Route path="/new" component={NewUser} />
         </Switch>
         <Footer />
       </Fragment>

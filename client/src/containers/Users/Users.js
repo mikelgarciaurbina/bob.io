@@ -6,7 +6,7 @@ import * as actions from '../../actions/Users';
 
 import { Container, UserCard } from './components';
 
-class App extends React.Component {
+class Users extends React.Component {
   componentDidMount() {
     const { itemsFetchData } = this.props;
 
@@ -19,7 +19,7 @@ class App extends React.Component {
     return <Container>{users.data.map(user => <UserCard key={user._id} user={user} />)}</Container>;
   }
 }
-App.propTypes = {
+Users.propTypes = {
   itemsFetchData: PropTypes.func,
   users: PropTypes.shape({
     data: PropTypes.arrayOf(PropTypes.shape({})),
@@ -27,7 +27,7 @@ App.propTypes = {
     loading: PropTypes.bool,
   }),
 };
-App.defaultProps = {
+Users.defaultProps = {
   itemsFetchData() {},
   users: {},
 };
@@ -42,4 +42,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(App);
+)(Users);
