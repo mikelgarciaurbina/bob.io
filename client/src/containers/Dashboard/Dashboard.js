@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 
 import { Header } from '../../components';
 import * as actions from '../../actions/Users';
-import logo from './logo.svg';
-import './Dashboard.css';
 
 class App extends React.Component {
   componentDidMount() {

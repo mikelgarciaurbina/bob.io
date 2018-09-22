@@ -1,11 +1,15 @@
 import React from 'react';
 
-import { ContainerStyled, HeaderStyled, TitleStyled } from './styles';
+import {
+  ContainerStyled, HeaderStyled, ImgStyled, TitleStyled,
+} from './styles';
+import logo from './bob.jpeg';
 
 const Header = () => (
   <HeaderStyled>
     <ContainerStyled>
-      <TitleStyled>Normal Button</TitleStyled>
+      <ImgStyled alt="logo" src={logo} />
+      <TitleStyled>Dashboard</TitleStyled>
     </ContainerStyled>
   </HeaderStyled>
 );

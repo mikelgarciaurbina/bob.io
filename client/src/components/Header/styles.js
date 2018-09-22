@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerStyled = styled.div`
-  background: #3f51b5;
+  background: #e83f40;
   color: #fff;
   display: flex;
   flex-direction: row;
@@ -24,6 +24,11 @@ export const HeaderStyled = styled.header`
   z-index: 1;
 `;
 
+export const ImgStyled = styled.img`
+  height: 64px;
+  margin-left: 20px;
+`;
+
 export const TitleStyled = styled.h1`
   color: #fefefe;
   flex: 1;
@@ -31,7 +36,7 @@ export const TitleStyled = styled.h1`
   font-size: 1.3em;
   font-weight: 400;
   line-height: 64px;
-  margin: 0 16px;
+  margin: 0 30px;
   max-width: none;
   padding: 0;
 `;
@@ -39,5 +44,6 @@ export const TitleStyled = styled.h1`
 export default {
   ContainerStyled,
   HeaderStyled,
+  ImgStyled,
   TitleStyled,
 };
