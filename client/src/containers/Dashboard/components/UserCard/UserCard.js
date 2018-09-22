@@ -6,9 +6,12 @@ import { Card } from '../../../../components';
 import { TextStyled } from './styles';
 import bag from './icons/bag.svg';
 import face from './icons/face.svg';
+import phone from './icons/phone.svg';
 
 const UserCard = ({ user }) => {
-  const { bags, lastname, name } = user;
+  const {
+    bags, lastname, name, mobileNumber,
+  } = user;
 
   return (
     <Card>
@@ -20,6 +23,12 @@ const UserCard = ({ user }) => {
         <img alt="bag" src={bag} />
         <span>{bags}</span>
       </TextStyled>
+      {!!mobileNumber && (
+        <TextStyled>
+          <img alt="phone" src={phone} />
+          <span>{mobileNumber}</span>
+        </TextStyled>
+      )}
     </Card>
   );
 };

@@ -10,7 +10,6 @@ export const CardStyled = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   color: ${GRAY};
   flex-grow: 1;
-  height: 300px;
   margin: 1rem;
   width: 30%;
 `;
