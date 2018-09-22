@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NameStyled = styled.p`
+export const TextStyled = styled.p`
   margin-left: 17px;
 
   & span {
@@ -11,5 +11,5 @@ export const NameStyled = styled.p`
 `;
 
 export default {
-  NameStyled,
+  TextStyled,
 };

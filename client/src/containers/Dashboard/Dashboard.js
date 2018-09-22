@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     const { users } = this.props;
 
-    return <Container>{users.data.map(user => <UserCard user={user} />)}</Container>;
+    return <Container>{users.data.map(user => <UserCard key={user._id} user={user} />)}</Container>;
   }
 }
 App.propTypes = {

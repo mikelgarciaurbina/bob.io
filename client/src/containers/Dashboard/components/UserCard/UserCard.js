@@ -3,23 +3,29 @@ import PropTypes from 'prop-types';
 
 import { Card } from '../../../../components';
 
-import { NameStyled } from './styles';
+import { TextStyled } from './styles';
+import bag from './icons/bag.svg';
 import face from './icons/face.svg';
 
 const UserCard = ({ user }) => {
-  const { lastname, name } = user;
+  const { bags, lastname, name } = user;
 
   return (
     <Card>
-      <NameStyled>
+      <TextStyled>
         <img alt="face" src={face} />
         <span>{`${name} ${lastname || ''}`}</span>
-      </NameStyled>
+      </TextStyled>
+      <TextStyled>
+        <img alt="bag" src={bag} />
+        <span>{bags}</span>
+      </TextStyled>
     </Card>
   );
 };
 UserCard.propTypes = {
   user: PropTypes.shape({
+    bags: PropTypes.number,
     lastname: PropTypes.string,
     name: PropTypes.string,
   }),
