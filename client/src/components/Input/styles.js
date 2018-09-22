@@ -36,6 +36,7 @@ export const ContainerStyled = styled.div`
   margin-left: 20px;
   margin-top: 20px;
   position: relative;
+  width: 100%;
 `;
 
 export const HighlightStyled = styled.span`
@@ -83,7 +84,7 @@ const labelActive = css`
 `;
 
 export const LabelStyled = styled.label`
-  color: #999;
+  color: ${GRAY};
   font-size: 18px;
   font-weight: normal;
   left: 5px;
