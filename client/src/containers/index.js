@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
   applyMiddleware, createStore, combineReducers, compose,
 } from 'redux';
@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import { Footer, Header } from '../components';
 import rootReducer from '../reducers';
 import Dashboard from './Dashboard';
 
@@ -20,9 +21,13 @@ const store = createStore(
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <Switch>
-        <Route path="/" component={Dashboard} />
-      </Switch>
+      <Fragment>
+        <Header />
+        <Switch>
+          <Route path="/" component={Dashboard} />
+        </Switch>
+        <Footer />
+      </Fragment>
     </BrowserRouter>
   </Provider>
 );
