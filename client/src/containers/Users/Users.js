@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as actions from '../../actions/Users';
 
-import { Container, UserCard } from './components';
+import { Container, NewButton, UserCard } from './components';
 
 class Users extends React.Component {
   componentDidMount() {
@@ -16,7 +16,12 @@ class Users extends React.Component {
   render() {
     const { users } = this.props;
 
-    return <Container>{users.data.map(user => <UserCard key={user._id} user={user} />)}</Container>;
+    return (
+      <Fragment>
+        <Container>{users.data.map(user => <UserCard key={user._id} user={user} />)}</Container>
+        <NewButton />
+      </Fragment>
+    );
   }
 }
 Users.propTypes = {
