@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { Header } from '../../components';
+import { Card, Header } from '../../components';
 import * as actions from '../../actions/Users';
+
+import { Container } from './components';
 
 class App extends React.Component {
   componentDidMount() {
@@ -16,7 +18,10 @@ class App extends React.Component {
     const { users } = this.props;
 
     return (
-      <Header />
+      <Fragment>
+        <Header />
+        <Container>{users.data.map(() => <Card />)}</Container>
+      </Fragment>
     );
   }
 }
